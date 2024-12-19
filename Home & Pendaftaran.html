@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page Universitas Pamulang">
+    <title>Universitas Pamulang</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d8eed9;
+        }
+
+        header {
+            background-color: #0f4a52;
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #d8eed9;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            background-color: #0f4a52;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .form-container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Universitas Pamulang</h1>
+        <p>Menjadi Universitas Unggul dalam Pendidikan dan Penelitian</p>
+    </header>
+
+    <nav>
+        <a href="Informasi Unpam.html">Informasi</a>
+        <a href="Jadwal Pendaftaran.html">Jadwal Pendaftaran</a>
+        <a href="#contact">Hubungi Kami</a>
+    </nav>
+
+    <div class="content">
+        <section id="about" class="main">
+            <h2>Tentang Universitas Pamulang</h2>
+            <img src="foto unpam viktor.jpg" alt="Kampus Unpam Viktor" style="width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 20px;">
+            <p>Universitas Pamulang adalah lembaga pendidikan tinggi yang terletak di Pamulang, Tangerang Selatan, Banten. Didirikan untuk menghasilkan sumber daya manusia yang berkualitas melalui pendidikan yang berbasis pada kompetensi dan pengembangan keilmuan.</p>
+        </section>
+
+        <section id="admissions" class="main">
+            <h2>Form Pendaftaran Mahasiswa Baru</h2>
+            <div class="form-container">
+                <form action="/submit" method="POST">
+                    <h2>Data Diri</h2>
+                    <label for="fullName">Nama Lengkap:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+
+                    <label for="birthPlace">Tempat Lahir:</label>
+                    <input type="text" id="birthPlace" name="birthPlace" required>
+
+                    <label for="birthDate">Tanggal Lahir:</label>
+                    <input type="date" id="birthDate" name="birthDate" required>
+
+                    <label for="gender">Jenis Kelamin:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">Laki-Laki</option>
+                        <option value="female">Perempuan</option>
+                    </select>
+
+                    <label for="address">Alamat:</label>
+                    <textarea id="address" name="address" required></textarea>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">No. Telepon:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <h2>Program Studi yang Dipilih</h2>
+                    <label for="program">Program Studi:</label>
+                    <select id="program" name="program" required>
+                        <option value="informatics">S1 Teknik Informatika</option>
+                        <option value="management">S1 Manajemen</option>
+                        <option value="education">S1 Pendidikan</option>
+                        <option value="law">S1 Hukum</option>
+                        <option value="accounting">S1 Akuntansi</option>
+                        <option value="systems">S1 Sistem Informasi</option>
+                    </select>
+
+                    <h2>Data Orang Tua</h2>
+                    <label for="fatherName">Nama Ayah:</label>
+                    <input type="text" id="fatherName" name="fatherName" required>
+
+                    <label for="motherName">Nama Ibu:</label>
+                    <input type="text" id="motherName" name="motherName" required>
+
+                    <label for="parentPhone">No. Telepon Orang Tua:</label>
+                    <input type="tel" id="parentPhone" name="parentPhone" required>
+
+                    <div style="text-align: center;">
+                        <button type="submit">Daftar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>This website is created by Annisaa Gladiola D. 241011701233</p>
+    </footer>
+
+</body>
+
+</html>
